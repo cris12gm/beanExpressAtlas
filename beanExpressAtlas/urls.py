@@ -23,4 +23,5 @@ from beanExpressAtlas import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.index, name='home'),
+    url(r'^results/', include('results.urls')),
 ]
