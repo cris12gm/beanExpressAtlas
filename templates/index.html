@@ -4,9 +4,55 @@
 {% block content %}
 <div class="index" id="index">
     <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
             <img src="{% static 'images/titleBig.png'%}" width="60%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="card bg-light mb-2 mt-3 ml-4 mr-4 w-100">
+                <div class="card-body">
+                    <form action="{% url 'results' %}" method="POST"  >
+                        <div class="form-group">
+                            <label for="geneID">Introduce a Gene ID:</label>
+                            <input type="text" class="form-control" id="geneID" aria-describedby="geneIDhelp">
+                            <small id="geneIDhelp" class="form-text text-muted">The format should be like <i>Phvul.001G000800</i></small>
+                            <button class="btn btn-info btn-sm "id="loadExampleGeneID">Load Example</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="sample">Select one sample or more:</label>
+                            <select multiple class="form-control" id="sample">
+                                <option value="IM">IM</option>
+                                <option value="SAM">SAM</option>
+                                <option value="VM">VM</option>
+                            </select>
+                            <button class="btn btn-info btn-sm mt-2" id="selectAllSamples" onclick="selectAll();">Select All</button>
+                            <button class="btn btn-light btn-sm mt-2" type="reset">Reset</button>
+                        </div>
+                        <button class="btn btn-success float-left" type="submit">View Expression</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 {% endblock %}
+
+{% block js %}
+<script>
+    function selectAll() {
+        $('#samples option').prop('selected', true);
+    };
+</script>
+
+<!-- LoadExamples -->
+<script>
+    $(document).ready(function(){
+        $('#loadExampleGeneID').on('click', function(){
+            $('#geneID').val("Phvul.001G000800");
+            return false;
+        });
+    });
+</script>
+
+{% endblock%}
