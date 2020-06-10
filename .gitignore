@@ -1,0 +1,12 @@
+*.pyc
+*~
+__pycache__
+envBean
+db.sqlite3
+/static
+.DS_Store
+config.py
+.vscode
+beanExpressAtlas/settings.py
+migrations/
+uploads/
