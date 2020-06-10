@@ -1,0 +1,100 @@
+/* Formato de todos los títulos */
+.titlePag {
+  margin-top: 10px;
+  color: #293241 ;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #367AD6;
+  border-color: #367AD6;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #194a90;
+  border-color: #194a90;
+}
+
+.btn-success:focus, .btn-success.focus {
+  color: #fff;
+  background-color: #194a90;
+  border-color: #367AD6;
+  box-shadow: 0 0 0 0.2rem #367AD6;
+}
+
+.btn-success.disabled, .btn-success:disabled {
+  color: #fff;
+  background-color:  #367AD6;
+  border-color:  #367AD6;
+}
+
+.btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle {
+  color: #fff;
+  background-color: #194a90;
+  border-color: #0e294f;
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem#194a90;
+}
+
+
+.preloader {
+    align-items: center;
+    background: rgb(23, 22, 22);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.3s linear;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  /* Color de las pestañas cuando están activas (el link) */
+.nav-link {
+  color: #367AD6;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #293241;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+
+/* Color de las nav-pills */
+
+.nav-pills .nav-link {
+  border-radius: 0.25rem;
+  color:#367AD6;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #367AD6;
+}
+
+/* Color de los link */
+
+.btn-link {
+  color: #367AD6;
+}
+
+a{
+  color: #367AD6;
+}
+
+
+/* Color de datatables */
+
+.page-item.active .page-link {
+  background-color: #367AD6 !important;
+  border: 1px solid #367AD6;
+}
