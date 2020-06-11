@@ -29,10 +29,10 @@ class results(TemplateView):
         barPlot = barplotGene(geneID)
         
         test = pha1037.getGeneExpression(geneID)
-        print (test)
         return render(request, self.template, {
             'geneID':geneID,
             'samples':samples,
-            'barPlot':barPlot
+            'barPlot':barPlot,
+            'test':test
         })
  
