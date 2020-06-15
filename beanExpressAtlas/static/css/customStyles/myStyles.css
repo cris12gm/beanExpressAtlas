@@ -1,44 +1,44 @@
 /* Formato de todos los títulos */
 .titlePag {
   margin-top: 10px;
-  color: #293241 ;
+  color: #143109 ;
 }
 
 .btn-success {
   color: #fff;
-  background-color: #367AD6;
-  border-color: #367AD6;
+  background-color: #2c6d14;
+  border-color: #2c6d14;
 }
 
 .btn-success:hover {
   color: #fff;
-  background-color: #194a90;
-  border-color: #194a90;
+  background-color: #143109;
+  border-color: #143109;
 }
 
 .btn-success:focus, .btn-success.focus {
   color: #fff;
-  background-color: #194a90;
-  border-color: #367AD6;
-  box-shadow: 0 0 0 0.2rem #367AD6;
+  background-color: #143109;
+  border-color: #2c6d14;
+  box-shadow: 0 0 0 0.2rem #2c6d14;
 }
 
 .btn-success.disabled, .btn-success:disabled {
   color: #fff;
-  background-color:  #367AD6;
-  border-color:  #367AD6;
+  background-color:  #2c6d14;
+  border-color:  #2c6d14;
 }
 
 .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
 .show > .btn-success.dropdown-toggle {
   color: #fff;
-  background-color: #194a90;
-  border-color: #0e294f;
+  background-color: #2c6d14;
+  border-color: #2c6d14;
 }
 
 .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
 .show > .btn-success.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem#194a90;
+  box-shadow: 0 0 0 0.2rem#2c6d14;
 }
 
 
@@ -58,11 +58,11 @@
 
   /* Color de las pestañas cuando están activas (el link) */
 .nav-link {
-  color: #367AD6;
+  color: #2c6d14;
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #293241;
+  color: #143109;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -72,29 +72,74 @@
 
 .nav-pills .nav-link {
   border-radius: 0.25rem;
-  color:#367AD6;
+  color:#143109;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #367AD6;
+  background-color: #D4DF9E;
 }
 
 /* Color de los link */
 
 .btn-link {
-  color: #367AD6;
+  color: #143109;
 }
 
 a{
-  color: #367AD6;
+  color: #143109;
 }
 
 
 /* Color de datatables */
 
 .page-item.active .page-link {
-  background-color: #367AD6 !important;
-  border: 1px solid #367AD6;
+  background-color: #D4DF9E !important;
+  border: 1px solid #D4DF9E;
+}
+
+/* Color de los iconos */
+.icons{
+    color:#143109;
+}
+
+
+/* Color de los botones btn-info  */
+
+.btn-info {
+  color: #fff;
+  background-color: #828C51;
+  border-color: #828C51;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: rgb(116, 124, 72);
+  border-color: rgb(116, 124, 72);
+}
+
+.btn-info:focus, .btn-info.focus {
+  color: #fff;
+  background-color: rgb(116, 124, 72);
+  border-color: #828C51;
+  box-shadow: 0 0 0 0.2rem #828C51;
+}
+
+.btn-info.disabled, .btn-info:disabled {
+  color: #fff;
+  background-color:  #828C51;
+  border-color:  #828C51;
+}
+
+.btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active,
+.show > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: #828C51;
+  border-color: #828C51;
+}
+
+.btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem#828C51;
 }

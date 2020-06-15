@@ -14,24 +14,114 @@
                 <div class="card-body">
                     <form action="{% url 'results' %}" id="formSamples" onsubmit="return checkFormSamples();" method="post">
                         {% csrf_token %}
-                        <div class="form-group">
-                            <label for="geneID">Introduce a Gene ID:</label>
-                            <input type="text" class="form-control" id="geneID" name="geneID" aria-describedby="geneIDhelp">
-                            <small id="geneIDhelp" class="form-text text-muted">The format should be like <i>Phvul.001G000800</i></small>
-                            <button class="btn btn-info btn-sm "id="loadExampleGeneID">Load Example</button>
-                        </div>
-                        <div class="form-group">
-                            <label for="samples">Select one sample or more:</label>
-                            <select class="selectpicker" multiple data-live-search="true" id="samples" name="samples" required>
-                                <option value="IM">IM</option>
-                                <option value="SAM">SAM</option>
-                                <option value="VM">VM</option>
-                            </select>
-                            <button class="btn btn-info btn-sm mt-2" id="selectAllSamples">Select All</button>
-                            <button class="btn btn-light btn-sm mt-2" type="reset">Reset</button>
-                        </div>
-                        <input type="hidden" name="samples_hidden" id="samples_hidden">
-                        <button class="btn btn-success float-left" type="submit">View Expression</button>
+                        <ul class="nav nav-tabs" id="inputElection" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="gene-tab" data-toggle="tab" href="#gene" role="tab" aria-controls="gene" aria-selected="true">GENE</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="geneList-tab" data-toggle="tab" href="#geneList" role="tab" aria-controls="geneList" aria-selected="false">LIST OF GENES</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="gene" role="tabpanel" aria-labelledby="gene-tab">
+                                <div class="card bg-light mt-2">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="input-group col-md-4">
+                                                <input size="50" type="text" class="form-control" id="geneID" name="geneID" aria-describedby="geneIDhelp" placeholder="Gene ID" required>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-info btn-sm "id="loadExampleGeneID">Load Example</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="geneList" role="tabpanel" aria-labelledby="geneList-tab">
+                                List of genes
+                            </div>
+                          </div>
+                          <div class="row mt-2">
+                            <div class="col-2">
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-center text-center">
+                                        <h4>Cultivar</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="form-group">
+                                                <select class="custom-select" multiple data-live-search="true" id="cultivars" name="cultivars" required>
+                                                    <option value="pha1037">PHA1037</option>
+                                                    <option value="pmb0225">PMB0225</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-center align-self-center">
+                                <i class="fas fa-fw fa-3x fa-arrow-right icons"></i>
+                            </div>
+                            <div class="col-2">
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-center text-center">
+                                        <h4>Organ</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="form-group">
+                                                <select class="custom-select" multiple data-live-search="true" id="cultivars" name="cultivars" required>
+                                                    <option value="flower">Flower</option>
+                                                    <option value="meristem">Meristem</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-center align-self-center">
+                                <i class="fas fa-fw fa-3x fa-arrow-right icons"></i>
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-center text-center">
+                                        <h4>Samples</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="form-group">
+                                                <select class="custom-select" multiple data-live-search="true" id="cultivars" name="cultivars" required>
+                                                    <option value="SAM">SAM</option>
+                                                    <option value="VM">VM</option>
+                                                    ç<option value="VM">Inflorescence Meristem</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-center align-self-center">
+                                <i class="fas fa-fw fa-3x fa-arrow-right icons"></i>
+                            </div>
+                            <div class="col-2">
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-center text-center">
+                                        <h4>Treatment</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="form-group">
+                                                <select class="custom-select" multiple data-live-search="true" id="cultivars" name="cultivars" required>
+                                                    <option value="None" selected >None</option>
+                                                    <option value="EMS">EMS</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        <button class="btn btn-success float-right mt-2" type="submit">View Expression</button> 
                     </form>
                 </div>
             </div>
