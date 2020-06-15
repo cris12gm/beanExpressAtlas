@@ -36,4 +36,4 @@ class pha1037(Base):
         session = createSessionSQL(KEY_localData)
         data = session.query(pha1037).filter_by(geneID=_id).all()
         session.close()
-        return data if len(data)>0 else None
+        return data[0] if len(data)>0 else None

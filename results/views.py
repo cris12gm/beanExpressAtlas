@@ -25,14 +25,16 @@ class results(TemplateView):
     def post(self, request):  
 
         geneID = request.POST['geneID']
-        samples = request.POST['sample']
-        barPlot = barplotGene(geneID)
-        
-        test = pha1037.getGeneExpression(geneID)
+        samples = request.POST['samples']
+        samplesHidden = request.POST['samples_hidden']
+        print (samples,samplesHidden)
+        expression = pha1037.getGeneExpression(geneID)
+        barPlot = ""
+        #barPlot = barplotGene(expression,samples) 
+
         return render(request, self.template, {
             'geneID':geneID,
             'samples':samples,
             'barPlot':barPlot,
-            'test':test
         })
  
